@@ -1,0 +1,25 @@
+= SEO Manager
+
+This is just a simple application to manage customers, websites and information about internet marketing clients under management.
+
+== Status
+
+Demo / Proof of concept. This was setup to test two Rails admin gems
+
+* Active Admin: https://github.com/gregbell/active_admin/blob/master/README.rdoc
+* Active Rails: https://github.com/sferik/rails_admin
+
+== Setup Instructions
+
+1. git clone git@github.com:ryandoom/SEO-Manager---AA.git
+2. copy config/database.yml.example to config/database.yml
+3. this is currently configured for postgresql, you can alter it for sqlite
+4. edit the Gemfile to use 'pg' for postgresql or sqlite3
+5. in your directory if you are using rvm run:   rvm gemset create seo_manager && echo "rvm use 1.9.2@seo_manager" > .rvmrc && cd .. && cd SEO-Manager---AA
+6. that will make a .rvmrc file in your directory to manage your gems. It should then take you out of the directory put you back into it and ask you to use the gem.  This is if you are using rvm, which is recommended
+7. gem install bundler
+8. bundle
+9. rake db:create
+10. rake db:migrate
+11. start rails server    rails s
+12. go to localhost:3000 and you should be able to access the system
